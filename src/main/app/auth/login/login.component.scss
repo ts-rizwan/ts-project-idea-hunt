@@ -1,0 +1,108 @@
+.login-section .form-section h1 {
+  font-size: 2.188rem;
+}
+.login-section .form-section input:focus {
+  border-color: #001c57;
+  outline: none;
+  box-shadow: none;
+}
+.login-section .form-section input::placeholder {
+  font-size: 0.938rem;
+}
+
+.login-section .text-section {
+  background-image: url('~src/main/assets/images/lgoin-img.webp');
+  height: 28.125rem;
+  background-size: cover;
+  background-position: center;
+}
+.login-section .text-section:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, var(--theme-primary), rgb(2, 35, 107));
+  opacity: 0.5;
+}
+.login-section .text-section h2 {
+  z-index: 1;
+}
+.login-section .text-section h2::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 0.125rem;
+  background-color: rgb(255, 255, 255);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.login-section .text-section p {
+  z-index: 1;
+}
+.form-section {
+  width: 20.625rem;
+}
+.form-section input {
+  width: 100%;
+  border: 0;
+  padding-left: 0rem;
+  border-bottom: 0.063rem solid grey;
+  border-radius: 0rem;
+}
+.login-bg {
+  background-image: url('~src/main/assets/images/login-bg.jpg');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.blur {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(3rem);
+  height: 100vh;
+}
+
+.m-headings {
+  display: none;
+}
+
+.m-headings h1 {
+  color: var(--theme-primary);
+}
+
+.login-area-bg {
+  background-color: white;
+  z-index: 1;
+}
+
+.error-section {
+  height: 1.2rem;
+}
+
+.spinner-border {
+  margin-left: 6px;
+  margin-bottom: -1px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .welcome-section,
+  .d-heading {
+    display: none;
+  }
+  .form-section {
+    padding: 1.875rem;
+  }
+  .login-bg .col-md-9 {
+    max-width: 20.75rem;
+  }
+  .m-headings {
+    display: block;
+  }
+  .login-bg {
+    background-position: right center;
+  }
+}
