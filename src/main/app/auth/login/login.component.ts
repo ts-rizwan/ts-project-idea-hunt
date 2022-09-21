@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AuthService } from '@app/auth/services/auth.service';
 import { Router } from '@angular/router';
+import { Constants } from '@app/common/constants';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
+
   loading: boolean = false;
+  public constantsFactory = Constants;
   loginForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', Validators.required),

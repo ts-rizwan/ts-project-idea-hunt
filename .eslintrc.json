@@ -37,7 +37,9 @@
       }
     },
     {
-      "files": ["*.html"],
+      "files": [
+        "*.html"
+      ],
       "plugins": ["extra-rules"],
       "extends": [
         "plugin:@angular-eslint/template/recommended",
