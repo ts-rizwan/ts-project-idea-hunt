@@ -4,10 +4,11 @@ import { AuthModule } from '@app/auth/auth.module';
 
 import { AppComponent } from '@app/app.component';
 import { RoutesModule } from '@app/routes/routes.module';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AuthModule, RoutesModule],
+  imports: [BrowserModule, AuthModule, RoutesModule, DashboardModule],
   providers: [],
   bootstrap: [AppComponent],
 })
