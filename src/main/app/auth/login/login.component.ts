@@ -10,7 +10,6 @@ import { Constants } from '@app/common/constants';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
-
   loading: boolean = false;
   public constantsFactory = Constants;
   loginForm = new FormGroup({
