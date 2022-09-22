@@ -5,7 +5,13 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
   providedIn: 'root',
 })
 export class AuthService {
-  constructor(private auth: AngularFireAuth) {}
+  authState: any = null;
+
+  constructor(private auth: AngularFireAuth) {
+    this.auth.authState.subscribe(authState => {
+      this.authState = authState;
+    });
+  }
 
   logIn(email: string, password: string) {
     return this.auth.signInWithEmailAndPassword(email, password);
@@ -13,5 +19,13 @@ export class AuthService {
 
   logOut() {
     this.auth.signOut();
+  }
+
+  get isAuthenticated(): boolean {
+    return this.authState !== null;
+  }
+
+  currentUserEmail(): string {
+    return this.isAuthenticated ? this.authState.email : null;
   }
 }

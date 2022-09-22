@@ -6,18 +6,13 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MenuComponent } from './menu/menu.component';
 import { IdeaComponent } from './idea/idea.component';
 
-
-
 @NgModule({
   declarations: [
     LayoutComponent,
     NavbarComponent,
     MenuComponent,
-    IdeaComponent
+    IdeaComponent,
   ],
-  imports: [
-    CommonModule,
-    RoutesModule,
-  ]
+  imports: [CommonModule, RoutesModule],
 })
-export class DashboardModule { }
+export class DashboardModule {}

@@ -10,11 +10,13 @@ const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'login', component: LoginComponent },
   { path: 'logout', component: LogoutComponent },
-  { path: 'dashboard', component: LayoutComponent,
-        children:[
-          { path: '', component: IdeaComponent},
-          { path: 'meeting', component: NavbarComponent}
-        ]
+  {
+    path: 'dashboard',
+    component: LayoutComponent,
+    children: [
+      { path: '', component: IdeaComponent },
+      { path: 'meeting', component: NavbarComponent },
+    ],
   },
 ];
 
