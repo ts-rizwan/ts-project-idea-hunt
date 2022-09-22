@@ -1,65 +1,41 @@
-<div class="idea-card mb-4 active">
-    <div class="row">
-      <div class="col-md-9">
-        <h4>Future of block chain in healthcare</h4>
-        <p class="mb-2">
-          Blockchain is currently heading the trending topics in the corporate
-          world. Multiiple analyses have revealed that blockchain
-          implementation can save money, increase..
-        </p>
-      </div>
-    </div>
+<div
+  *ngFor="let idea of ideas"
+  class="idea-card mb-4"
+  [ngClass]="{
+    discussion: idea.status === 'discussion',
+    scheduled: idea.status === 'scheduled',
+    completed: idea.status === 'completed'
+  }">
+  <h4>{{ idea.title }}</h4>
+  <p class="mb-2">
+    {{ idea.description | slice: 0:165
+    }}{{ idea.description.length > 165 ? '...' : '' }}
+  </p>
+  <div class="stats">
+    <span class="upvotes"
+      ><i class="fa fa-thumbs-up"></i> {{ idea.upvotes }}</span
+    >
+    <span class="downvotes"
+      ><i class="fa fa-thumbs-down"></i> {{ idea.downvotes }}</span
+    >
+    <span class="volunteer"
+      ><span class="title">Volunteer:</span> {{ idea.trainer }}</span
+    >
+    <span class="status"
+      ><span class="title">Status:</span> {{ idea.status | titlecase }}</span
+    >
+    <span *ngIf="idea.sessionTime !== ''" class="meeting"
+      ><span class="title">Meeting @ {{ idea.sessionTime }}</span></span
+    >
   </div>
+</div>
 
-  <div class="idea-card mb-4 scheduled">
-    <h4>Future of block chain in healthcare</h4>
-    <p class="mb-2">
-      Blockchain is currently heading the trending topics in the corporate
-      world. Multiiple analyses have revealed that blockchain implementation
-      can save money, increase..
-    </p>
-  </div>
-
-  <div class="idea-card mb-4 active">
-    <h4>Future of block chain in healthcare</h4>
-    <p class="mb-2">
-      Blockchain is currently heading the trending topics in the corporate
-      world. Multiiple analyses have revealed that blockchain implementation
-      can save money, increase..
-    </p>
-  </div>
-  <div class="idea-card mb-4 active">
-    <h4>Future of block chain in healthcare</h4>
-    <p class="mb-2">
-      Blockchain is currently heading the trending topics in the corporate
-      world. Multiiple analyses have revealed that blockchain implementation
-      can save money, increase..
-    </p>
-  </div>
-
-  <div class="idea-card mb-4 completed">
-    <h4>Future of block chain in healthcare</h4>
-    <p class="mb-2">
-      Blockchain is currently heading the trending topics in the corporate
-      world. Multiiple analyses have revealed that blockchain implementation
-      can save money, increase..
-    </p>
-  </div>
-
-  <div class="idea-card mb-4 scheduled">
-    <h4>Future of block chain in healthcare</h4>
-    <p class="mb-2">
-      Blockchain is currently heading the trending topics in the corporate
-      world. Multiiple analyses have revealed that blockchain implementation
-      can save money, increase..
-    </p>
-  </div>
-
-  <div class="idea-card mb-4 active">
-    <h4>Future of block chain in healthcare</h4>
-    <p class="mb-2">
-      Blockchain is currently heading the trending topics in the corporate
-      world. Multiiple analyses have revealed that blockchain implementation
-      can save money, increase..
-    </p>
-  </div>
+<div
+  *ngIf="showLoader"
+  class="d-flex justify-content-center align-items-center flex-column loader">
+  <img
+    src="https://i.ibb.co/ZBGFCLF/Ellipsis-1-8s-58px.gif"
+    alt="Ellipsis-1-8s-58px"
+    border="0" />
+  <p>Please Wait...</p>
+</div>

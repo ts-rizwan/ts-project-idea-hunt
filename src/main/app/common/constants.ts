@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-    providedIn: 'root'
+  providedIn: 'root',
 })
-export class Constants {      
-    public static siteTitle: string = "Idea Hunt";
+export class Constants {
+  public static siteTitle: string = 'Idea Hunt';
 }

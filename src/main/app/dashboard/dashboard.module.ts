@@ -5,19 +5,22 @@ import { RoutesModule } from '@app/routes/routes.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MenuComponent } from './menu/menu.component';
 import { IdeaComponent } from './idea/idea.component';
-
-
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { environment } from 'src/main/environments/environment';
 
 @NgModule({
   declarations: [
     LayoutComponent,
     NavbarComponent,
     MenuComponent,
-    IdeaComponent
+    IdeaComponent,
   ],
   imports: [
     CommonModule,
     RoutesModule,
-  ]
+    AngularFireModule.initializeApp(environment.fireBase),
+    AngularFirestoreModule,
+  ],
 })
-export class DashboardModule { }
+export class DashboardModule {}

@@ -6,7 +6,7 @@
   cursor: pointer;
 }
 
-.idea-card.active {
+.idea-card.discussion {
   border-left: 0.5rem solid var(--theme-primary);
 }
 
@@ -20,4 +20,38 @@
 
 .idea-card .overview {
   font-size: 1rem;
+}
+
+.idea-card .stats span{
+  margin-right: 0.8rem;
+}
+
+.idea-card .stats i, .idea-card .stats .title{
+  color: #35898B;
+  margin-right: unset;
+}
+
+.meeting{
+  float: right;
+  font-size: 14px;
+}
+
+.loader{
+  height: 68vh;
+}
+
+@media only screen and (max-width: 1200px) {
+  .status, .volunteer{
+    display: block;
+    float: right;
+    font-size: 14px;
+  }
+  .status, .meeting{
+    display: none;
+  }
+  .idea-card p{
+    text-align: justify;
+    font-size: 14px;
+    line-height: 19px;
+  }
 }

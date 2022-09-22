@@ -10,7 +10,6 @@ import { Constants } from '@app/common/constants';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
-
   loading: boolean = false;
   public constantsFactory = Constants;
   loginForm = new FormGroup({
@@ -34,7 +33,7 @@ export class LoginComponent {
       this.auth
         .logIn(this.email?.value as string, this.password?.value as string)
         .then(() => {
-          this.router.navigate(['/dashboard']);
+          this.router.navigate(['/ideas']);
         })
         .catch(error => {
           this.setLoginError(error.code);

@@ -1,7 +1,7 @@
 /* global styles*/
 @import '~bootstrap/dist/css/bootstrap.css';
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
-
+@import "../node_modules/font-awesome/scss/font-awesome.scss";
 :root {
   --theme-font: 'Quicksand', sans-serif;
   --theme-primary: rgb(0, 28, 87);
