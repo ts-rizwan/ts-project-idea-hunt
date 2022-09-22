@@ -45,9 +45,9 @@ export class LoginComponent {
 
   setLoginError(errorCode: string) {
     switch (errorCode) {
-      case 'auth/invalid-email':
-      case 'auth/wrong-password':
-      case 'auth/user-not-found': {
+      case Constants.invalidEmailRoute:
+      case Constants.wrongPasswordRoute:
+      case Constants.notFoundRoute: {
         this.loginForm.setErrors({ unauthenticated: true });
         break;
       }
