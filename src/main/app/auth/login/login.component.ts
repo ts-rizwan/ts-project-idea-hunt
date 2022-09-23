@@ -33,7 +33,7 @@ export class LoginComponent {
       this.auth
         .logIn(this.email?.value as string, this.password?.value as string)
         .then(() => {
-          this.router.navigate(['/logout']);
+          this.router.navigate(['/dashboard']);
         })
         .catch(error => {
           this.setLoginError(error.code);
