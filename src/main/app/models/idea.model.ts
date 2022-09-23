@@ -1,5 +1,3 @@
-import { User } from './user.model';
-
 export class Idea {
   id: string = '';
   title: string = '';
@@ -8,7 +6,7 @@ export class Idea {
   upvotes: number = 0;
   downvotes: number = 0;
   sessionTime: string = '';
-  trainer: User | null = null;
+  trainer: any;
   sessionLink: string = '';
   postedAt: string = '';
   postedBy: string = '';

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Idea } from '@app/models/idea.model';
 import { IdeaService } from '../services/idea.service';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { User } from '@app/models/user.model';
 
 @Component({
   selector: 'app-idea',
@@ -17,8 +16,6 @@ export class IdeaComponent implements OnInit {
     private ideaService: IdeaService,
     private firestore: AngularFirestore
   ) {}
-
-  user: User | null = null;
 
   ngOnInit(): void {
     this.showLoader = true;
@@ -36,7 +33,7 @@ export class IdeaComponent implements OnInit {
           sessionLink: item.payload.doc.get('sessionLink'),
           postedAt: item.payload.doc.get('postedAt'),
           postedBy: item.payload.doc.get('postedBy'),
-        } as Idea;
+        };
       });
       this.showLoader = false;
     });

@@ -1,4 +1,3 @@
 export class User {
-  UID: string = '';
-  displayName: any = '';
+  displayName: string = '';
 }

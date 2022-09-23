@@ -13,9 +13,8 @@ export class IdeaService {
 
   getUser() {
     return this.firestore
-      .collection('user-collection', ref =>
-        ref.where('UID', '==', 'zh0krOAcwAa7NOmvHYP4tXr4Xn72')
-      )
+      .collection('user-collection')
+      .doc('zh0krOAcwAa7NOmvHYP4tXr4Xn72')
       .valueChanges();
   }
 }
