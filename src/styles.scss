@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+/* global styles*/
+@import '~bootstrap/dist/css/bootstrap.css';
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+:root {
+  --theme-font: 'Quicksand', sans-serif;
+  --theme-primary: rgb(0, 28, 87);
+  --error-color: rgb(255, 0, 51);
+}
+
+* {
+  font-family: var(--theme-font);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.theme-btn {
+  border-radius: 0rem;
+  padding: 0.3rem 1.3rem;
+  font-size: 0.8rem;
+  background-color: var(--theme-primary);
+  color: white;
+}
+
+.theme-btn:hover {
+  color: white;
+  background-color: rgb(2, 35, 107);
+}
+
+.error-text {
+  font-size: 0.938rem;
+  color: var(--error-color);
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
+}
